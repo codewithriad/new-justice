@@ -1,33 +1,26 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
+import HeroSlider from "@/components/home/HeroSlider";
 
 export const metadata: Metadata = {
-  title: "Home Page | New Justice",
-  description: "This is the home page of our website",
+  title: "Justice | Trusted Legal Services",
+  description:
+    "Explore professional family law, criminal defence, and business law services. Contact our legal team to discuss your needs.",
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Home Page | New Justice",
-    description: "This is the home page of our website",
-    url: `${process.env.My_Domain}`,
-    siteName: "New Justice",
-    images: [
-      {
-        url: "https://www.newjustice.com/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "New Justice",
-      },
-    ],
-    locale: "en_US",
+    title: "Justice | Trusted Legal Services",
+    description:
+      "Professional legal guidance for individuals, families, and businesses.",
     type: "website",
+    images: ["/images/home-og.jpg"],
   },
 };
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <>
-      <h1>Hello, Home Page!</h1>
-    </>
+    <main>
+      <HeroSlider />
+    </main>
   );
 }
